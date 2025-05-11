@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+.task-canvas {
+  touch-action: none;
+  user-select: none;
+}
+
+.task-item {
+  @apply bg-white rounded-lg shadow-md p-4 cursor-move;
+  transition: all 0.2s ease-in-out;
+}
+
+.task-item:hover {
+  @apply shadow-lg;
+  transform: scale(1.02);
+}
+
+.task-item.completed {
+  @apply bg-green-50;
+  opacity: 0.7;
+}
+
+.task-item.high-priority {
+  @apply border-l-4 border-red-500;
+}
+
+.task-item.medium-priority {
+  @apply border-l-4 border-yellow-500;
+}
+
+.task-item.low-priority {
+  @apply border-l-4 border-green-500;
+} 
